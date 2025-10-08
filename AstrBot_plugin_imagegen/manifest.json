@@ -1,0 +1,32 @@
+{
+  "name": "Qwen Image Generator",
+  "id": "astrbot.plugin.qwen_image",
+  "version": "1.0.0",
+  "description": "使用 Qwen-Image 模型生成图像的 AstrBot 插件",
+  "author": "Sanae",
+  "entry": "main.py",
+  "requirements": ["requests", "urllib3"],
+  "commands": [
+    {
+      "name": "生成图片",
+      "trigger": ["生成图片", "画图", "draw", "image"],
+      "description": "根据提示词生成图片"
+    }
+  ],
+  "config": {
+    "QWEN_API_KEY": {
+      "type": "string",
+      "description": "Qwen API Key"
+    },
+    "QWEN_API_URL": {
+      "type": "string",
+      "default": "https://dashscope.aliyuncs.com/api/v1/services/aigc/text2image/generation",
+      "description": "Qwen Image API URL"
+    },
+    "DEFAULT_SIZE": {
+      "type": "string",
+      "default": "1920x1080",
+      "description": "默认分辨率"
+    }
+  }
+}
